@@ -1,0 +1,163 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Home_Page{% endblock title %}
+
+
+{% block banner_matter %}
+
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/b1.jpg" %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/b2.jpg" %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/b3.jpg" %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/Untitleddesign.png" %}" class="d-block w-100" alt="banner images">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{% endblock banner_matter %}
+
+{% block information %}
+<div class="container">
+  <div class="row bg-brown text-white p-5 border-bottom shadow">
+    <div class="col-md-8 offset-md-2 text-center">
+        <h1 class="display-4 mb-4">Thank You</h1>
+        <p class="lead fs-5">
+            Fresh, creamy, and wholesome cow milk for a healthy start to your day! 
+            Try it now... Purely natural with no added preservatives - our cow milk is the real deal!
+        </p>
+    </div>
+</div>
+
+
+</div>
+{% endblock information %}
+
+
+{% block main-content %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+  .container {
+      padding: 40px;
+  }
+
+  .image-container {
+      position: relative;
+      overflow: hidden;
+  }
+
+  .image-container img {
+      transition: transform 0.3s ease;
+      max-width: 100%;
+      height: auto;
+      display: block;
+  }
+
+  .image-container:hover img {
+      transform: translateX(20px); /* Slide the image 20px to the right on hover */
+  }
+</style>
+<div class="container">
+    <h2 class="text-center">Dairy Products</h2>
+    <br><br>
+
+    <!-- First Row -->
+    <div class="row">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'GH' %}">
+                    <div class="goodnesscount text-center">
+                        <img src="{% static "app/images/cow-ghee.png" %}" class="img-responsive img-thumbnail"
+                            alt="Ghee">
+                        <p class="mlkpro">Ghee</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnesssec buttermilk curdbgpro">
+                <a href="{% url 'category' 'CR' %}">
+                    <div class="goodnesscount text-center">
+                        <img src="{% static "app/images/curd1.png" %}" class="img-responsive img-thumbnail"
+                            alt="Curd">
+                        <p class="mlkpro">Curd</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'LS' %}">
+                    <div class="goodnesscount text-center">
+                        <img src="{% static "app/images/lassi.png" %}" class="img-responsive img-thumbnail"
+                            alt="Lassi">
+                        <p class="mlkpro">Lassi</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- Second Row -->
+    <div class="row">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'MS' %}">
+                    <div class="goodnesscount text-center">
+                        <img src="{% static "app/images/milkshake1.png" %}" class="img-responsive img-thumbnail"
+                            alt="Milkshake">
+                        <p class="mlkpro">Milkshake</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnesssec buttermilk curdbgpro">
+                <a href="{% url 'category' 'MI' %}">
+                    <div class="goodnesscount text-center">
+                        <img src="{% static "app/images/milk123.png" %}" class="img-responsive img-thumbnail"
+                            alt="Milk">
+                        <p class="mlkpro">Milk</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'IS' %}">
+                    <div class="goodnesscount text-center">
+                        <img src="{% static "app/images/icecream123.png" %}" class="img-responsive img-thumbnail"
+                            alt="Ice Cream">
+                        <p class="mlkpro">Ice Cream</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+</div>
+<br><br>
+{% endblock main-content %}

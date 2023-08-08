@@ -1,0 +1,116 @@
+{% extends "app/base.html" %}
+{% load static %}
+{% block title %}Contact{% endblock title %}
+
+{% block banner_matter %}
+  <div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/b1.jpg" %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/b2.jpg" %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/b3.jpg" %}" class="d-block w-100" alt="banner images">
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static "app/images/banner/b4.jpg" %}" class="d-block w-100" alt="banner images">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+{% endblock banner_matter %}
+
+
+{% block main-content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ceabab;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #b14537;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #459249;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>Please fill out the form below to get in touch with us.</p>
+    <form action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:contact@company.com">desidairy@gmail.com</a></p>
+    <p>Phone: +919988774561</p>
+    <p>Address: 123 Main Street, Pune City-Maharashtra ,India</p>
+    <br><br>
+
+    <body>
+        <h2>We Would Like To Get Your Feedback</h2>
+        <p>Click the button below to go to the feedback form:</p>
+        <a href="{% url 'feedback_form' %}" class="btn btn-primary">Feedback Form</a>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </body>   
+    <br><br>
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <p>Q: How long does it take to receive a response?</p>
+    <p>A: We typically respond within 24 hours.</p>
+    
+    
+</body>
+</html>
+{% endblock main-content %}
+
+
