@@ -12,7 +12,17 @@
     <link rel="stylesheet" href="{% static 'app/css/all.min.css' %}" />
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}" />
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
+    
+    <style>
+      footer {
+          background-color: #f4f4f4;
+          text-align: center;
+          padding: 10px;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+    </style>
     
 </head>
 
@@ -94,13 +104,15 @@
           </ul>
         </div>
       </nav>
-
+      <br><br>
+      <footer>
+        <p>Copyright © 2023 Dairy_Product by Sachin.. All rights reserved.</p>
+      </footer>  
       {% block banner_matter %}{% endblock banner_matter %}
       {% block information %}{% endblock information %}
       {% block main-content %}{% endblock main-content %}
       {% block payment-gateway %}{% endblock payment-gateway %}
 
-      
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
